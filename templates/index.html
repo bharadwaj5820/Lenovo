@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <br><select name="Geo" id="Geo" required="required">
+                <option value="NA">NA</option>
+                <option value="Brazil">Brazil</option>
+                <option value="AP">AP</option>
+                <option value="EMEA">EMEA</option>
+                <option value="Other">Other</option>
+            </br></select>
+            <br><select name="LP" id="LP" required="required">
+                <option value="SMB">SMB</option>
+                <option value="Consumer">Consumer</option>
+            </br></select>
+             <br>
+            <label for="Features_SAT_Value">Features_SAT_Value:</label>
+            <input id="Features_SAT_Value" name="Features_SAT_Value" rows="1" cols="5">
+            </br>
+            <br>
+            <label for="Features_SAT_Design">Features_SAT_Design:</label>
+            <input id="Features_SAT_Design" name="Features_SAT_Design" rows="1" cols="5">
+
+            </br>
+            <br>
+            <label for="Features_SAT_Weight">Features_SAT_Weight:</label>
+            <input id="Features_SAT_Weight" name="Features_SAT_Weight" rows="1" cols="5">
+
+            </br>
+            <br>
+            <label for="Features_SAT_Performance">Features_SAT_Performance:</label>
+            <input id="Features_SAT_Performance" name="Features_SAT_Performance" rows="1" cols="5">
+            </br>
+            <br>
+            <label for="Features_SAT_Quality">Features_SAT_Quality:</label>
+            <input id="Features_SAT_Quality" name="Features_SAT_Quality" rows="1" cols="5">
+            </br>
+           <br>
+            <label for="Equipment_SAT_OS">Equipment_SAT_OS:</label>
+            <input id="Equipment_SAT_OS" name="Equipment_SAT_OS" rows="1" cols="5">
+            </br>
+         <br>
+            <label for="Equipment_SAT_Keyboard">Equipment_SAT_Keyboard:</label>
+            <input id="Equipment_SAT_Keyboard" name="Equipment_SAT_Keyboard" rows="1" cols="5">
+            </br>
+            <br>
+            <label for="Equipment_SAT_Noise">Equipment_SAT_Noise:</label>
+            <input id="Equipment_SAT_Noise" name="Equipment_SAT_Noise" rows="1" cols="5">
+            </br>
+       <br>
+            <label for="Equipment_SAT_Battery">Equipment_SAT_Battery:</label>
+            <input id="Equipment_SAT_Battery" name="Equipment_SAT_Battery" rows="1" cols="5">
+            </br>
+            <br>
+            </select>
+            <br><br><button id="sub" type="submit ">Final Rating of Product</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}</h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: coral;
+        }
+
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: coral;
+        }
+
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: coral;
+        }
+
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
